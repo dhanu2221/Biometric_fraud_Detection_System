@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
 import uuid
 import numpy as np
@@ -96,4 +97,4 @@ def score(req: ScoreRequest):
 
 @app.get("/")
 def root():
-    return {"status": "ok", "service": "biometric-fraud-rag"}
+    return RedirectResponse(url="/docs")
