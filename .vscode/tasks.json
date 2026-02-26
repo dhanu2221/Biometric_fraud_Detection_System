@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Query: Collections",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "query_chroma.py",
+                "SELECT * FROM collections;"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Query: Custom SQL",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "query_chroma.py"
+            ],
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": [],
+            "promptOnClose": true
+        }
+    ]
+}
